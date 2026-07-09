@@ -4,7 +4,8 @@ import api from '../../utils/api';
 import ProductCard from '../../components/ProductCard';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Sparkles, ArrowRight, Printer, Copy, Zap, Trophy, TrendingUp, Award, Package } from 'lucide-react';
-import Heroimage from '../../assets/hero.jpeg';
+import Heroimage1 from '../../assets/webbanner1.jpg';
+import Heroimage2 from '../../assets/webbanner2.jpg'
 export default function Home() {
   const [featured, setFeatured] = useState([]);
   const [settings, setSettings] = useState(null);
@@ -44,19 +45,19 @@ export default function Home() {
   // Hero carousel images
   const heroSlides = [
     {
-      image: Heroimage,
+      image: Heroimage2,
       title: settings?.heroTitle || 'Discover Premium Printers & Photocopiers',
       subtitle: settings?.heroSubtitle || 'Explore our curated showcase of elite printers and photocopiers designed to elevate your business.',
       buttonText: settings?.heroButtonText || 'Shop the Catalog'
     },
     {
-      image: Heroimage,
+      image: Heroimage1,
       title: 'High-Quality Printing Solutions',
       subtitle: 'Experience crystal clear prints with our latest technology',
       buttonText: 'Explore Now'
     },
     {
-      image: Heroimage,
+      image: Heroimage1,
       title: 'Eco-Friendly Photocopiers',
       subtitle: 'Save energy while delivering exceptional performance',
       buttonText: 'Learn More'

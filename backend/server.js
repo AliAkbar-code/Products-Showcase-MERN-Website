@@ -16,6 +16,7 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const productRoutes = require('./routes/productRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -49,6 +50,7 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api', reviewRoutes);
 
 // Custom Error Handling Middleware
 app.use(errorHandler);

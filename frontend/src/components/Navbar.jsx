@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../App';
 import api from '../utils/api';
@@ -64,7 +64,7 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
-  // Split store name for color styling — first word gets primary color
+  // Split store name for color styling — both words get primary color
   const nameParts = storeName.split(' ');
   const firstName = nameParts[0] || 'Swift';
   const restName = nameParts.slice(1).join(' ') || 'Solutions';
@@ -115,7 +115,7 @@ export default function Navbar() {
               }}
             >
               <span style={{ color: theme.palette.primary.main }}>{firstName}</span>
-              {restName && <span style={{ color: '#1e293b' }}>{restName}</span>}
+              {restName && <span style={{ color: theme.palette.primary.main }}>{restName}</span>}
             </Typography>
           </Box>
 
@@ -163,14 +163,14 @@ export default function Navbar() {
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': { 
                   transform: 'translateY(-2px)',
-                  '& span:first-of-type': {
+                  '& span': {
                     color: theme.palette.primary.dark
                   }
                 }
               }}
             >
               <span style={{ color: theme.palette.primary.main, transition: 'color 0.3s ease' }}>{firstName}</span>
-              {restName && <span style={{ color: '#1e293b', transition: 'color 0.3s ease' }}>{restName}</span>}
+              {restName && <span style={{ color: theme.palette.primary.main, transition: 'color 0.3s ease' }}>{restName}</span>}
             </Typography>
           </Box>
 

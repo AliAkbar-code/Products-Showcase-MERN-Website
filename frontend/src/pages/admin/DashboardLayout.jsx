@@ -7,6 +7,7 @@ const sidebarLinks = [
   { to: '/admin/products', icon: '📦', label: 'Products' },
   { to: '/admin/categories', icon: '🏷️', label: 'Categories' },
   { to: '/admin/homepage', icon: '🏠', label: 'Homepage' },
+  { to: '/admin/reviews', icon: '⭐', label: 'Reviews' }, // Added reviews link
   { to: '/admin/messages', icon: '✉️', label: 'Messages' },
   { to: '/admin/site-settings', icon: '⚙️', label: 'Site Settings' },
   { to: '/admin/settings', icon: '👤', label: 'Account' },

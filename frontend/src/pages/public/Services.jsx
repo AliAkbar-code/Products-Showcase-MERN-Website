@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Wrench, Printer, Settings, Truck, Shield, Headphones, 
-  RefreshCw, FileText, ArrowRight, CheckCircle, Phone 
+import {
+  Wrench, Printer, Settings, Truck, Shield, Headphones,
+  RefreshCw, FileText, ArrowRight, CheckCircle, Phone
 } from 'lucide-react';
 import api from '../../utils/api';
 // Import banner image from assets folder
@@ -124,7 +124,7 @@ export default function Services() {
           background: 'rgba(0, 0, 0, 0.6)',
           zIndex: 0
         }} />
-        
+
         <div style={{
           position: 'absolute', top: '-80px', left: '-80px',
           width: '300px', height: '300px', borderRadius: '50%',

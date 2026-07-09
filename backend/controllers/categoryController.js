@@ -3,13 +3,28 @@ const Product = require('../models/Product');
 const ErrorResponse = require('../utils/errorResponse');
 const { uploadToCloudinary, deleteFromCloudinary } = require('../utils/cloudinary');
 
+// exports.getCategories = async (req, res, next) => {
 exports.getCategories = async (req, res, next) => {
   try {
     const categories = await Category.find();
+
+    const categoriesWithCount = await Promise.all(
+      categories.map(async (category) => {
+        const productCount = await Product.countDocuments({
+          category: category._id
+        });
+
+        return {
+          ...category.toObject(),
+          productCount
+        };
+      })
+    );
+
     res.status(200).json({
       success: true,
-      data: categories,
-      total: categories.length
+      data: categoriesWithCount,
+      total: categoriesWithCount.length
     });
   } catch (error) {
     next(error);

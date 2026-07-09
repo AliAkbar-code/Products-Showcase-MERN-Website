@@ -20,6 +20,7 @@ import ManageMessages from './pages/admin/ManageMessages';
 import AdminSettings from './pages/admin/AdminSettings';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Reviews from './pages/admin/Reviews';
 import ScrollToTop from './components/ScrollToTop'; 
 import './index.css';
 
@@ -84,6 +85,7 @@ function App() {
               <Route path="site-settings" element={<ManageSettings />} />
               <Route path="settings" element={<AdminSettings />} />
               <Route path="messages" element={<ManageMessages />} />
+              <Route path="reviews" element={<Reviews />} />
               <Route index element={<Navigate to="overview" />} />
             </Route>
 
